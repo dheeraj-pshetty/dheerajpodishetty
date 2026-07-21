@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<meta name="theme-color" content="#F5F3FF" media="(prefers-color-scheme: light)" />
-<meta name="theme-color" content="#0B0A1C" media="(prefers-color-scheme: dark)" />
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='1'%20y2='1'%3E%3Cstop%20offset='0%25'%20stop-color='%234F46E5'/%3E%3Cstop%20offset='55%25'%20stop-color='%238B5CF6'/%3E%3Cstop%20offset='100%25'%20stop-color='%2322D3EE'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle%20cx='32'%20cy='32'%20r='32'%20fill='url(%23g)'/%3E%3Ctext%20x='32'%20y='43'%20font-family='Arial,Helvetica,sans-serif'%20font-size='26'%20font-weight='700'%20fill='%23ffffff'%20text-anchor='middle'%3EDP%3C/text%3E%3C/svg%3E" />
+<meta name="theme-color" content="#F5F3FF" />
 <title>Dheeraj Podishetty — Senior Data Engineer</title>
 <meta name="description" content="Senior Data Engineer with 7+ years architecting ETL/ELT pipelines, medallion data platforms, and data quality frameworks at enterprise scale. Azure & AWS certified." />
 <meta property="og:title" content="Dheeraj Podishetty — Senior Data Engineer" />
@@ -53,14 +51,8 @@
   --ink-0:#1E1B3A;
   --ink-1:#4C4570;
   --ink-2:#8B85AA;
-  --glass-bg: rgba(var(--glass-rgb),0.70);
-  --glass-border: rgba(var(--border-rgb),0.18);
-  --glass-rgb: 245,243,255;
-  --border-rgb: 124,58,237;
-  --ghost-rgb: 238,234,255;
-  --cardgrad2-rgb: 236,233,251;
-  --iconbg-rgb: 233,228,255;
-  --track-rgb: 0,0,0;
+  --glass-bg: rgba(245,243,255,0.70);
+  --glass-border: rgba(124,58,237,0.18);
   --r-sm: 12px;
   --r-md: 20px;
   --r-lg: 28px;
@@ -68,25 +60,6 @@
   --font-body:'Inter', sans-serif;
   --font-mono:'JetBrains Mono', monospace;
   --ease-out: cubic-bezier(.16,1,.3,1);
-}
-
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg-0:#0B0A1C;
-    --bg-1:#14122C;
-    --bg-2:#1E1B3E;
-    --ink-0:#F1EFFF;
-    --ink-1:#B7B2D9;
-    --ink-2:#7C7799;
-    --glass-bg: rgba(30,27,58,0.55);
-    --glass-border: rgba(139,92,246,0.28);
-    --glass-rgb: 30,27,58;
-    --border-rgb: 139,92,246;
-    --ghost-rgb: 36,32,68;
-    --cardgrad2-rgb: 32,28,64;
-    --iconbg-rgb: 40,36,78;
-    --track-rgb: 255,255,255;
-  }
 }
 
 *{ margin:0; padding:0; box-sizing:border-box; }
@@ -150,7 +123,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   max-width:780px;
 }
 .section-sub{ font-size:18px; color:var(--ink-1); max-width:580px; line-height:1.75; margin-top:18px; font-weight:400; }
-.grad-text, .grad-text .word{
+.grad-text{
   background:linear-gradient(96deg, #4F46E5 0%, #8B5CF6 55%, #22D3EE 100%);
   -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
 }
@@ -169,7 +142,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   background:linear-gradient(95deg, #4F46E5, #8B5CF6);
 }
 .btn-primary:hover{ box-shadow:0 8px 28px -6px rgba(79,70,229,0.40); }
-.btn-ghost{ color:var(--ink-0); border:1px solid rgba(var(--border-rgb),0.28); background:rgba(var(--ghost-rgb),0.7); }
+.btn-ghost{ color:var(--ink-0); border:1px solid rgba(124,58,237,0.28); background:rgba(238,234,255,0.7); }
 .btn-ghost:hover{ border-color:#4F46E5; background:rgba(79,70,229,0.06); }
 
 .ripple{ position:absolute; border-radius:50%; background:rgba(255,255,255,0.5); transform:scale(0); animation:rippleAnim .6s var(--ease-out); pointer-events:none; }
@@ -197,11 +170,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 #preloader{
   position:fixed; inset:0; z-index:10000; background:var(--bg-0);
   display:flex; align-items:center; justify-content:center; flex-direction:column; gap:26px;
-  padding:0 28px; text-align:center;
 }
 #preloader .pl-mark{ font-family:var(--font-mono); font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-0); }
-@media(max-width:480px){ #preloader .pl-mark{ font-size:11px; letter-spacing:.16em; } }
-#preloader .pl-bar-track{ width:240px; height:2px; background:rgba(var(--track-rgb),0.10); border-radius:10px; overflow:hidden; }
+#preloader .pl-bar-track{ width:240px; height:2px; background:rgba(0,0,0,0.10); border-radius:10px; overflow:hidden; }
 #preloader .pl-bar{ width:0%; height:100%; background:linear-gradient(90deg,#4F46E5,#22D3EE); box-shadow:0 0 10px rgba(79,70,229,0.4); }
 #preloader .pl-pct{ font-family:var(--font-mono); font-size:13px; color:var(--cyan); letter-spacing:.05em; }
 
@@ -226,7 +197,7 @@ main{ position:relative; z-index:3; }
   position:fixed; top:18px; left:50%; transform:translateX(-50%); z-index:500;
   width:min(960px, 92vw); display:flex; align-items:center; justify-content:space-between;
   padding:12px 14px 12px 22px; border-radius:100px;
-  background:rgba(var(--glass-rgb),0.92); border:1px solid rgba(var(--border-rgb),0.18);
+  background:rgba(245,243,255,0.92); border:1px solid rgba(124,58,237,0.18);
   backdrop-filter:blur(20px) saturate(160%); -webkit-backdrop-filter:blur(20px) saturate(160%);
   transition: top .4s var(--ease-out), box-shadow .4s;
 }
@@ -262,7 +233,7 @@ main{ position:relative; z-index:3; }
 }
 
 #mobile-menu{
-  position:fixed; inset:0; z-index:450; background:rgba(var(--glass-rgb),0.99); backdrop-filter:blur(10px);
+  position:fixed; inset:0; z-index:450; background:rgba(245,243,255,0.99); backdrop-filter:blur(10px);
   display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;
   opacity:0; visibility:hidden; transition:opacity .4s, visibility .4s;
 }
@@ -299,14 +270,14 @@ main{ position:relative; z-index:3; }
 /* Pipeline status card — the signature element */
 .pipe-card{
   position:relative; width:340px; padding:0; border-radius:var(--r-lg); overflow:hidden;
-  background:linear-gradient(160deg, rgba(var(--glass-rgb),0.88), rgba(var(--cardgrad2-rgb),0.70));
+  background:linear-gradient(160deg, rgba(245,243,255,0.88), rgba(236,233,251,0.70));
   border:1px solid var(--glass-border); backdrop-filter:blur(20px);
   box-shadow:0 20px 50px -16px rgba(79,70,229,0.22);
   transform-style:preserve-3d; z-index:2;
 }
 .pipe-head{
   display:flex; align-items:center; justify-content:space-between;
-  padding:16px 20px; border-bottom:1px solid rgba(var(--border-rgb),0.15);
+  padding:16px 20px; border-bottom:1px solid rgba(124,58,237,0.15);
 }
 .pipe-head .ph-title{ font-family:var(--font-mono); font-size:11.5px; color:var(--ink-1); letter-spacing:.04em; }
 .pipe-head .ph-status{
@@ -318,16 +289,16 @@ main{ position:relative; z-index:3; }
 .pipe-stage{ display:flex; flex-direction:column; align-items:center; gap:8px; position:relative; z-index:2; }
 .pipe-stage .ps-ic{
   width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center;
-  background:rgba(var(--iconbg-rgb),0.65); border:1px solid rgba(var(--border-rgb),0.18);
+  background:rgba(233,228,255,0.65); border:1px solid rgba(124,58,237,0.18);
 }
 .pipe-stage span{ font-size:9.5px; font-family:var(--font-mono); color:var(--ink-2); letter-spacing:.02em; }
-.pipe-line{ position:absolute; top:19px; left:38px; right:38px; height:1.4px; background:rgba(var(--border-rgb),0.18); z-index:1; }
+.pipe-line{ position:absolute; top:19px; left:38px; right:38px; height:1.4px; background:rgba(124,58,237,0.18); z-index:1; }
 .pipe-packet{
   position:absolute; top:-2.5px; width:7px; height:7px; border-radius:50%;
   background:#4F46E5; box-shadow:0 0 8px rgba(79,70,229,0.6);
 }
 .pipe-metrics{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-.pipe-metric{ padding:12px 14px; border-radius:12px; background:rgba(var(--iconbg-rgb),0.55); border:1px solid rgba(var(--border-rgb),0.16); }
+.pipe-metric{ padding:12px 14px; border-radius:12px; background:rgba(233,228,255,0.55); border:1px solid rgba(124,58,237,0.16); }
 .pipe-metric .pm-label{ font-size:10px; font-family:var(--font-mono); color:var(--ink-2); letter-spacing:.03em; text-transform:uppercase; margin-bottom:6px; }
 .pipe-metric .pm-val{ font-family:var(--font-display); font-size:19px; font-weight:600; color:var(--ink-0); }
 .pipe-metric .pm-val.up{ color:#059669; }
@@ -343,7 +314,7 @@ main{ position:relative; z-index:3; }
 .float-chip .ic{ width:7px;height:7px;border-radius:50%; box-shadow:0 0 8px currentColor; }
 
 .scroll-cue{ position:absolute; bottom:36px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:10px; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-2); font-family:var(--font-mono); }
-.scroll-cue .mouse{ width:22px; height:36px; border-radius:14px; border:1.4px solid rgba(var(--border-rgb),0.35); position:relative; }
+.scroll-cue .mouse{ width:22px; height:36px; border-radius:14px; border:1.4px solid rgba(124,58,237,0.35); position:relative; }
 .scroll-cue .mouse::before{ content:''; position:absolute; top:6px; left:50%; transform:translateX(-50%); width:3px; height:7px; border-radius:3px; background:var(--cyan); animation:scrollDown 1.8s infinite; }
 @keyframes scrollDown{ 0%{ opacity:1; top:6px; } 70%{ opacity:0; top:18px; } 100%{ opacity:0; top:6px; } }
 
@@ -376,13 +347,13 @@ main{ position:relative; z-index:3; }
 }
 .arch-node .an-ic{
   width:64px; height:64px; border-radius:16px; display:flex; align-items:center; justify-content:center;
-  background:linear-gradient(160deg, rgba(var(--iconbg-rgb),0.65), rgba(var(--cardgrad2-rgb),0.40)); border:1px solid rgba(var(--border-rgb),0.18);
+  background:linear-gradient(160deg, rgba(233,228,255,0.65), rgba(236,233,251,0.40)); border:1px solid rgba(124,58,237,0.18);
   position:relative; z-index:2;
 }
 .arch-node .an-label{ text-align:center; }
 .arch-node .an-label b{ display:block; font-family:var(--font-display); font-size:14.5px; font-weight:600; margin-bottom:4px; }
 .arch-node .an-label span{ font-size:11.5px; color:var(--ink-2); font-family:var(--font-mono); }
-.arch-connector{ flex-shrink:0; width:48px; height:1.4px; background:rgba(var(--border-rgb),0.16); position:relative; margin-top:-44px; }
+.arch-connector{ flex-shrink:0; width:48px; height:1.4px; background:rgba(124,58,237,0.16); position:relative; margin-top:-44px; }
 .arch-connector .ac-packet{ position:absolute; top:-3px; width:7px; height:7px; border-radius:50%; background:#4F46E5; box-shadow:0 0 8px rgba(79,70,229,0.5); }
 
 @media(max-width:760px){
@@ -433,7 +404,7 @@ main{ position:relative; z-index:3; }
 .skill-cats{ display:flex; flex-direction:column; gap:30px; }
 .skill-cat h4{ font-family:var(--font-display); font-size:16px; font-weight:700; color:#4F46E5; margin-bottom:14px; letter-spacing:.02em; }
 .skill-tag-row{ display:flex; gap:9px; flex-wrap:wrap; }
-.skill-tag{ font-size:13.5px; font-family:var(--font-mono); padding:8px 15px; border-radius:100px; background:rgba(var(--iconbg-rgb),0.60); border:1px solid rgba(var(--border-rgb),0.18); color:var(--ink-0); }
+.skill-tag{ font-size:13.5px; font-family:var(--font-mono); padding:8px 15px; border-radius:100px; background:rgba(233,228,255,0.60); border:1px solid rgba(124,58,237,0.18); color:var(--ink-0); }
 @media(max-width:980px){ .skills-layout{ grid-template-columns:1fr; gap:20px; } #skill-sphere-wrap{ height:300px; order:-1; } }
 
 /* ============================================================
@@ -476,7 +447,7 @@ main{ position:relative; z-index:3; }
    ============================================================ */
 .contact-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:60px; }
 .contact-info-item{ display:flex; gap:16px; align-items:flex-start; margin-bottom:28px; }
-.contact-info-item .ci-ic{ width:44px;height:44px; border-radius:13px; flex-shrink:0; display:flex; align-items:center; justify-content:center; background:rgba(var(--iconbg-rgb),0.60); border:1px solid rgba(var(--border-rgb),0.18); }
+.contact-info-item .ci-ic{ width:44px;height:44px; border-radius:13px; flex-shrink:0; display:flex; align-items:center; justify-content:center; background:rgba(233,228,255,0.60); border:1px solid rgba(124,58,237,0.18); }
 .contact-info-item h4{ font-size:12.5px; color:var(--ink-2); letter-spacing:.04em; text-transform:uppercase; margin-bottom:6px; font-family:var(--font-mono); }
 .contact-info-item p{ font-size:16px; font-weight:500; }
 .contact-socials{ display:flex; gap:12px; margin-top:30px; }
@@ -497,7 +468,7 @@ main{ position:relative; z-index:3; }
 .field{ position:relative; margin-bottom:18px; }
 .field label{ display:block; font-size:12px; color:var(--ink-2); margin-bottom:9px; letter-spacing:.03em; font-family:var(--font-mono); }
 .field input, .field textarea{
-  width:100%; padding:14px 16px; border-radius:12px; background:rgba(var(--glass-rgb),0.85); border:1px solid rgba(var(--border-rgb),0.18);
+  width:100%; padding:14px 16px; border-radius:12px; background:rgba(245,243,255,0.85); border:1px solid rgba(124,58,237,0.18);
   color:var(--ink-0); font-family:var(--font-body); font-size:16px; transition:border-color .3s, box-shadow .3s; resize:none;
 }
 .field input:focus, .field textarea:focus{ outline:none; border-color:#4F46E5; box-shadow:0 0 0 3px rgba(79,70,229,0.12); }
@@ -795,7 +766,7 @@ footer{ border-top:1px solid var(--glass-border); padding:70px 0 36px; }
 }
 #chatInput{
   flex:1; padding:11px 14px; border-radius:14px; resize:none; min-height:42px; max-height:100px;
-  background:rgba(var(--glass-rgb),0.85); border:1px solid rgba(var(--border-rgb),0.18);
+  background:rgba(245,243,255,0.85); border:1px solid rgba(124,58,237,0.18);
   color:var(--ink-0); font-family:var(--font-body); font-size:14px;
   transition:border-color .25s; line-height:1.5; overflow-y:auto;
 }
@@ -1036,6 +1007,7 @@ footer{ border-top:1px solid var(--glass-border); padding:70px 0 36px; }
   .photo-preview-wrap{ flex-direction:column; align-items:flex-start; }
   .cert-admin-row .cr-name{ font-size:12.5px; }
 }
+#preloader{display:none !important;}
 </style>
 </head>
 <body>
@@ -1119,7 +1091,7 @@ footer{ border-top:1px solid var(--glass-border); padding:70px 0 36px; }
 
         <div class="hero-stats" data-reveal>
           <div class="hero-stat"><b data-count="7">0</b><span>YEARS EXPERIENCE</span></div>
-          <div class="hero-stat"><b data-count="17">0</b><span>ENGINEERS LED</span></div>
+          <div class="hero-stat"><b data-count="7">0</b><span>ENGINEERS LED</span></div>
           <div class="hero-stat"><b data-count="70">0</b><span>% MANUAL WORK CUT</span></div>
         </div>
       </div>
@@ -1221,7 +1193,7 @@ footer{ border-top:1px solid var(--glass-border); padding:70px 0 36px; }
     <div class="wrap">
       <div class="eyebrow" data-reveal>Career history</div>
       <h2 class="section-title" data-reveal>Seven years at Wipro, <span class="grad-text">one steady climb.</span></h2>
-      <p class="section-sub" data-reveal>From building ETL workflows to owning end-to-end data platforms and leading a team of 17 — in order, because the progression is the point.</p>
+      <p class="section-sub" data-reveal>From building ETL workflows to owning end-to-end data platforms and leading a team of seven — in order, because the progression is the point.</p>
 
       <div class="timeline">
         <div class="tl-item" data-reveal>
@@ -1229,14 +1201,14 @@ footer{ border-top:1px solid var(--glass-border); padding:70px 0 36px; }
           <div class="tl-company">Wipro Limited · Plano, TX</div>
           <ul>
             <li>Built and automated end-to-end ETL/ELT pipelines ingesting data from disparate source systems into a centralized cloud warehouse, reducing manual data handling by 70% through Airflow DAG orchestration.</li>
-            <li>Led a team of 17 engineers — code reviews, mentoring on ETL design patterns, SQL optimization, and dimensional modeling.</li>
+            <li>Led a team of 7 engineers — code reviews, mentoring on ETL design patterns, SQL optimization, and dimensional modeling.</li>
             <li>Implemented Change Data Capture (CDC) and incremental loading, cutting ETL processing time by 50% while keeping data consistent across interconnected systems.</li>
             <li>Built a data quality and validation framework with Python, SQL, and Great Expectations — improving data accuracy by 30% and reducing downstream reporting discrepancies.</li>
             <li>Designed Redis caching strategies and tuned SQL/Oracle queries, improving data access layer performance by 35% and cutting average query latency by 25%.</li>
             <li>Integrated AWS services (S3, RDS, Lambda) into scalable ingestion pipelines; implemented row-level security and access controls.</li>
             <li>Partnered with Product and Engineering to define KPIs, instrument telemetry, and build automated Tableau/Power BI dashboards enabling self-service analytics.</li>
           </ul>
-          <div class="tl-impact"><span>70% less manual work</span><span>50% faster ETL</span><span>30% better accuracy</span><span>Team of 17</span></div>
+          <div class="tl-impact"><span>70% less manual work</span><span>50% faster ETL</span><span>30% better accuracy</span><span>Team of 7</span></div>
         </div>
 
         <div class="tl-item" data-reveal>
@@ -1386,8 +1358,7 @@ footer{ border-top:1px solid var(--glass-border); padding:70px 0 36px; }
           <span class="cc-org">PMI</span><span class="cc-name">Project Management Professional (PMP)</span>
           <svg class="cc-verify-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
         </a>
-        <div class="cert-card" data-reveal><span class="cc-org">AWS</span><span class="cc-name">AWS Certified Cloud Practitioner</span></div>
-        <div class="cert-card" data-reveal><span class="cc-org">AWS</span><span class="cc-name">AWS Certified Data Engineer &ndash; Associate</span></div>
+        <div class="cert-card" data-reveal><span class="cc-org">AWS</span><span class="cc-name">AWS Certified</span></div>
         <div class="cert-card" data-reveal><span class="cc-org">Wipro</span><span class="cc-name">Certified Java Developer</span></div>
         <div class="cert-card" data-reveal><span class="cc-org">HackerRank</span><span class="cc-name">Java · JavaScript · Python · Problem Solving</span></div>
       </div>
@@ -1424,6 +1395,10 @@ footer{ border-top:1px solid var(--glass-border); padding:70px 0 36px; }
         <p class="section-sub" data-reveal>Open to senior data engineering roles and select consulting work. Reach out directly — I respond to every message myself.</p>
 
         <div style="margin-top:42px;">
+          <div class="contact-info-item" data-reveal>
+            <div class="ci-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><h4>Phone</h4><p><a href="tel:9409771860" style="color:inherit;">940-977-1860</a></p></div>
+          </div>
           <div class="contact-info-item" data-reveal>
             <div class="ci-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
             <div><h4>Email</h4><p><a href="mailto:dheeraj.pshetty@gmail.com" style="color:inherit;">dheeraj.pshetty@gmail.com</a></p></div>
@@ -1511,6 +1486,7 @@ footer{ border-top:1px solid var(--glass-border); padding:70px 0 36px; }
         <h5>Connect</h5>
         <a href="mailto:dheeraj.pshetty@gmail.com">Email</a>
         <a href="https://www.linkedin.com/in/dheerajpodishetty">LinkedIn</a>
+        <a href="tel:9409771860">Phone</a>
       </div>
     </div>
 
@@ -2572,13 +2548,13 @@ FACTS:
 - Current: Wipro Limited, Plano TX (Dec 2022-Present)
 - Previous: Wipro Hyderabad (Jun 2019-Dec 2022)
 - Location: Dallas, TX. Open to senior data engineering roles.
-- Email: dheeraj.pshetty@gmail.com
+- Email: dheeraj.pshetty@gmail.com | Phone: 940-977-1860
 - LinkedIn: linkedin.com/in/dheerajpodishetty
 - M.S. Data Science, University of North Texas, GPA 4.0 (Dec 2024)
 - B.S. Computer Science, Kakatiya Institute of Technology, GPA 3.8 (May 2019)
-- Achievements: 70% less manual work, 50% faster ETL via CDC, 30% better data accuracy, 35% better query performance, led team of 17
+- Achievements: 70% less manual work, 50% faster ETL via CDC, 30% better data accuracy, 35% better query performance, led team of 7
 - Skills: Python, PySpark, SQL, Airflow, Azure, AWS, Databricks, Docker, Kubernetes, Oracle, MySQL, PostgreSQL, MongoDB, Redis, Tableau, Power BI
-- Certs: Azure Data Engineer Associate, Power BI Analyst, Databricks DE/ML/Analyst, Oracle DS/DevOps/OCI/GenAI, Meta DB Engineer, IBM Full Stack, Google Data Analytics, AWS Certified Cloud Practitioner, AWS Certified Data Engineer - Associate, HackerRank Java/JS/Python
+- Certs: Azure Data Engineer Associate, Power BI Analyst, Databricks DE/ML/Analyst, Oracle DS/DevOps/OCI/GenAI, Meta DB Engineer, IBM Full Stack, Google Data Analytics, AWS Certified, HackerRank Java/JS/Python
 - If you don't know something say: reach out at dheeraj.pshetty@gmail.com`;
 
   if(chatFab) chatFab.addEventListener('click', function(){
